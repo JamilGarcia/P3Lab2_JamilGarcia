@@ -5,11 +5,12 @@
 #include <iomanip>
 using namespace std;
 
-void recursiva(double verticeX, double respuesta, int a, int b, int c, int cont){
+int recursiva(double verticeX, double respuesta, int a, int b, int c, int cont){
     if (cont >= 0){
     respuesta = recursiva(verticeX, respuesta, a, b, c, cont-1) - ((a * (pow(verticeX, 2)) + (b*verticeX) + c) / (2*a*(verticeX) +b));
     } else {
         cout << "Respuesta: " << respuesta; 
+        return respuesta; 
     }
 }
 
